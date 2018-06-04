@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "568543179439",
+    "firebase_url": "https://omnifyinterview.firebaseio.com",
+    "project_id": "omnifyinterview",
+    "storage_bucket": "omnifyinterview.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568543179439:android:f35ae40f8679ef2a",
+        "android_client_info": {
+          "package_name": "com.interview.omnifyinterview"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "568543179439-5q3df66s39leot30kad60av34970q2qi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.interview.omnifyinterview",
+            "certificate_hash": "758a1abad88a19886254ceef268ce00749201fcb"
+          }
+        },
+        {
+          "client_id": "568543179439-gg4dvsh0o9q5pop3tl5gs8h6e05qg7td.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "568543179439-gg4dvsh0o9q5pop3tl5gs8h6e05qg7td.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCipyrDC4_th6wve-Ai2xDQJAxCyxtC4Ow"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "568543179439-gg4dvsh0o9q5pop3tl5gs8h6e05qg7td.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

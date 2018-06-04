@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">OmnifyInterview</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_logout">Logout</string>
+    <string name="title_activity_story">Top Stories</string>
+    <string name="dot">&#160;&#160;&#8226;&#160;&#160;</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

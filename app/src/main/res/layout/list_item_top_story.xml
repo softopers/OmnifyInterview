@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp"
+    android:layout_marginTop="4dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="horizontal">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EEEEEE"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewScore"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#FFCC80"
+            android:gravity="center"
+            android:maxLength="3"
+            android:minEms="3"
+            android:textColor="@color/abc_secondary_text_material_light"
+            tools:text="999" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingBottom="4dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:minLines="2"
+                android:textColor="@color/abc_primary_text_material_light"
+                android:textSize="16sp"
+                tools:text="Introduction to HTML components" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewUrl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="@color/abc_secondary_text_material_light"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                tools:text="www.w3c.org" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewTimeUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="@color/abc_secondary_text_material_light"
+                android:textSize="12sp"
+                tools:text="Introduction to HTML components" />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableTop="@drawable/ic_chat_bubble_outline_black_24dp"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center"
+                android:maxLength="3"
+                android:minEms="3"
+                android:textColor="@color/abc_primary_text_material_light"
+                tools:text="999" />
+        </FrameLayout>
+    </android.support.v7.widget.LinearLayoutCompat>
+</FrameLayout>
