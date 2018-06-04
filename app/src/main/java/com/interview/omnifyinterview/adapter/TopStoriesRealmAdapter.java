@@ -23,6 +23,7 @@ public class TopStoriesRealmAdapter extends RealmBasedRecyclerViewAdapter<TopSto
         super(context, realmResults, automaticUpdate, animateResults);
     }
 
+    /* duration breakdown for showing formatted time */
     public static String getDurationBreakdown(long millis) {
         if (millis < 0) {
             throw new IllegalArgumentException("Duration must be greater than zero!");

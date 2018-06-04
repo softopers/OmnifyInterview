@@ -59,6 +59,8 @@ public class StoryActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private Gson gson;
     private Long lastUpdated;
+
+    /* runnable for check last updated time */
     private final Runnable lastUpdateTask = new Runnable() {
         @Override
         public void run() {
@@ -82,6 +84,7 @@ public class StoryActivity extends AppCompatActivity {
         }
     };
 
+    /* check if connection is available */
     public static boolean hasConnection(Context context) {
         NetworkInfo activeNetworkInfo = ((ConnectivityManager) context.getSystemService(
                 Context.CONNECTIVITY_SERVICE)).getActiveNetworkInfo();
@@ -133,6 +136,7 @@ public class StoryActivity extends AppCompatActivity {
         requestForTopStories(Constants.TOP_STORIES);
     }
 
+    /* get request for fetching top stories */
     private void requestForTopStories(String url) {
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET
                 , url
@@ -172,6 +176,7 @@ public class StoryActivity extends AppCompatActivity {
         requestQueue.add(request);
     }
 
+    /* get request for fetching a story details */
     private void requestForStroyDetails(String url) {
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET
                 , url

@@ -166,6 +166,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         signInWithPhoneAuthCredential(credential);
     }
 
+    /* send message to a number */
     private void startPhoneNumberVerification(String phoneNumber) {
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
                 phoneNumber,
@@ -175,6 +176,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mCallbacks);
     }
 
+    /* basic phone number validation */
     private boolean isValidMobile(String phone) {
         return android.util.Patterns.PHONE.matcher(phone).matches();
     }
@@ -193,6 +195,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    /* login with google credentials */
     private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
         Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
         showProgressDialog();
@@ -219,6 +222,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 });
     }
 
+    /* login with phone credentials */
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
         showProgressDialog();
         firebaseAuth.signInWithCredential(credential)
@@ -259,6 +263,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mProgressDialog.dismiss();
         }
     }
+
+    /* check if current user is logged in or not */
 
     @Override
     public void onStart() {

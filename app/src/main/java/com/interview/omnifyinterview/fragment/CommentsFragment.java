@@ -113,6 +113,7 @@ public class CommentsFragment extends Fragment {
         }
     }
 
+    /* get request comment */
     private void requestComments(String url) {
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET
