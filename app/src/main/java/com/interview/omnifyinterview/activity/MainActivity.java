@@ -68,6 +68,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ButterKnife.bind(this);
         firebaseAuth = FirebaseAuth.getInstance();
 
+        Log.d(TAG, "onCreate: merge");
+
         buttonSendOTP.setOnClickListener(this);
         buttonLoginWithGoogle.setOnClickListener(this);
 
