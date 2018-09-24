@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         firebaseAuth = FirebaseAuth.getInstance();
 
         Log.d(TAG, "onCreate: merge");
+        Log.d(TAG, "onCreate: merge tag");
 
         buttonSendOTP.setOnClickListener(this);
         buttonLoginWithGoogle.setOnClickListener(this);
