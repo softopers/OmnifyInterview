@@ -1,9 +1,13 @@
 package com.interview.omnifyinterview.activity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
@@ -61,6 +65,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private GoogleSignInClient googleSignInClient;
     private ProgressDialog mProgressDialog;
 
+    @Nullable
+    public static PackageInfo getPackageInfo(@NonNull Context context) {
+        PackageManager manager = context.getPackageManager();
+        PackageInfo info = null;
+        try {
+            info = manager.getPackageInfo(context.getPackageName(), 0);
+        } catch (PackageManager.NameNotFoundException e2) {
+            // Version info not included if exception thrown
+        }
+        return info;
+    }
+
+    @Nullable
+    public static String getAppVersionName(@NonNull Context context) {
+        PackageInfo info = getPackageInfo(context);
+        if (info != null) {
+            return info.versionName;
+        }
+        return null;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +95,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Log.d(TAG, "onCreate: merge");
         Log.d(TAG, "onCreate: merge tag");
+        Log.d(TAG, "onCreate: " + getAppVersionName(getApplicationContext()));
 
         buttonSendOTP.setOnClickListener(this);
         buttonLoginWithGoogle.setOnClickListener(this);
@@ -251,6 +277,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 });
     }
 
+    /* check if current user is logged in or not */
+
     public void showProgressDialog() {
         if (mProgressDialog == null) {
             mProgressDialog = new ProgressDialog(this);
@@ -266,8 +294,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mProgressDialog.dismiss();
         }
     }
-
-    /* check if current user is logged in or not */
 
     @Override
     public void onStart() {
@@ -292,4 +318,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
         }
     }
+
 }
