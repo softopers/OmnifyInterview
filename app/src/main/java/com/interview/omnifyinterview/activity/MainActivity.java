@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Log.d(TAG, "onCreate: merge");
         Log.d(TAG, "onCreate: merge tag");
         Log.d(TAG, "onCreate: " + getAppVersionName(getApplicationContext()));
+        Log.d(TAG, "onCreate: new tag");
 
         buttonSendOTP.setOnClickListener(this);
         buttonLoginWithGoogle.setOnClickListener(this);
